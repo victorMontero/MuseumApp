@@ -1,6 +1,6 @@
 package com.example.museumapp.data.services
 
-import com.example.museumapp.data.model.MuseumResponse
+import com.example.museumapp.data.model.dto.MuseumResponseDTO
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -11,6 +11,6 @@ interface MuseumService {
         @Query("toppieces") isTopPieces: Boolean = true,
         @Query("imgonly") imgOnly: Boolean = true,
         @Query("ps") resultsPerPage: Int = 100,
-        @Query("involvedMaker") artist: String = "Vincent van Gogh"
-    ): MuseumResponse
+        @Query("involvedMaker") involvedMaker: String = "Vincent van Gogh"
+    ): MuseumResponseDTO
 }
